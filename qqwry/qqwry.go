@@ -83,7 +83,7 @@ func (q *QQwry) initIPData(datapath string) (rs interface{}) {
 	// 判断文件是否存在
 	_, err := os.Stat(*datFile)
 	if err != nil && os.IsNotExist(err) {
-		log.Println("IP库文件不存在，请下载")
+		log.Printf("IP库文件 %s 不存在，请下载\n",*datFile)
 		return
 	} else {
 		// 打开文件句柄
